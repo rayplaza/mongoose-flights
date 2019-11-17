@@ -4,7 +4,14 @@ var Flight = require('../models/flight');
 module.exports = {
     new: newFlight,
     create,
+    index,
 }
+
+function index(req, res) {
+    Movie.find({}, function(err, flights) {
+      res.render('flights/index', {flights});
+    });
+  }
 
 function create(req, res) {
     var flight = new Flight(req.body);
