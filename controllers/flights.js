@@ -8,7 +8,7 @@ module.exports = {
 }
 
 function index(req, res) {
-    Movie.find({}, function(err, flights) {
+    Flight.find({}, function(err, flights) {
       res.render('flights/index', {flights});
     });
   }
@@ -17,7 +17,7 @@ function create(req, res) {
     var flight = new Flight(req.body);
     flight.save(function(err) {
         if (err) return res.render('flights/new');
-        res.redirect('/flights/new');
+        res.redirect('/flights');
     });
 }
 
