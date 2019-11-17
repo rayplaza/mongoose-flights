@@ -2,7 +2,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var flightSchema = new Schema({
-    airline: String,
+    airline: {
+        type: String,
+        enum: ['United', 'Southwest', 'American']},
     flightNo: Number,
     departs: Date,
 });
