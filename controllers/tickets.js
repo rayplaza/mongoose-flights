@@ -1,4 +1,4 @@
-var Tickets = require('../models/ticket');
+var Ticket = require('../models/ticket');
 
 module.exports = {
     new: newTicket
@@ -7,7 +7,7 @@ module.exports = {
 function newTicket(req, res) {
     Ticket.find({}, function(err, tickets) {
         res.render('tickets/new', {
-            title: 'Add Ticket',
+            title: 'Add Tickets',
             tickets
         });
     })
