@@ -27,13 +27,13 @@ var flightSchema = new Schema({
         default: function() {
             let today = new Date();
             return new Date(today.setFullYear(today.getFullYear() + 1));
-        },
+        }
+    },
     airport: {
         type: String,
         enum: ['AUS', 'DAL', 'LAX', 'SD']
     },
     destinations: [destinationSchema]
-    }, 
 }, {
     timestamps: true
 });

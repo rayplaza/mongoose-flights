@@ -16,6 +16,7 @@ function show(req, res) {
 
 function index(req, res) {
     Flight.find({}, function(err, flights) {
+        console.log(flights)
       res.render('flights/index', {flights});
     });
   }
