@@ -7,7 +7,22 @@ body {
   
 }
 
+.container {
+  background-color: rgb(61, 61, 136);
+  border-radius: 1rem;
+  margin-top: 200px;
+}
 
+table {
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(51, 101, 141);
+  border-radius: .5rem;
+}
+
+thead {
+  background-color: grey;
+}
 
 
 

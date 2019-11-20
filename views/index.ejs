@@ -6,9 +6,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <div class="container">
     <h1>Travel Tracker</h1>
     <p>The number one spot for tracking your flights to and from four major destinations.</p>
     <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>ADD A FLIGHT</a><br>
     <a href="/flights" <%- title === 'Check Flights' ? 'class="active"' : '' %>>CHECK FLIGHT LIST</a>
+    </div>
   </body>
 </html>
