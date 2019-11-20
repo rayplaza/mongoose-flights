@@ -8,19 +8,11 @@
     <title>Add Tickets</title>
 </head>
 <body>
-  <select>
-    <% tickets.forEach(function(p) { %>
-      <option><%= p.name %></option>
-    <% }) %>
-  </select>
-</p>
-<form id="add-ticket-form" action="/flights" method="POST">
+<form id="add-ticket-form" action="/flights/<%= flight._id %>/tickets" method="POST">
   <label>Seat:</label>
   <input name="seat" required pattern="[A-F][1-9]\d?">
   <label>Price:</label>
   <input type="text" name="price">
-  <label>Flight:</label>
-  <input type="text" name="flight">
   <input type="submit" value="Add Tickets">
 </form>
 </body>

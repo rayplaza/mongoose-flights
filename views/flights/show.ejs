@@ -8,7 +8,7 @@
     <title>Detail List</title>
 </head>
 <body>
-    <a href="/tickets/new" <%- title === 'Add Tickets' ? 'class="active"' : '' %>>ADD TICKET</a>
+    <a href="/flights/<%=flight._id%>/tickets/new" <%- title === 'Add Tickets' ? 'class="active"' : '' %>>ADD TICKET</a>
   <h2>Detail List</h2>
   <section id="show-page">
       <div>Airline: </div>
@@ -19,6 +19,11 @@
       <div><%= flight.departs %></div>
       <div>Airport: </div>
       <div><%= flight.airport %></div>
+      <div>Tickets: </div>
+      <% tickets.forEach(tick => { %>
+        <li><span><%= tick.seat %></span> <span>$<%= tick.price %></span></li>
+        <% }) %>
+
     </section>
     
     <br><br><h2>Add Destination</h2>
